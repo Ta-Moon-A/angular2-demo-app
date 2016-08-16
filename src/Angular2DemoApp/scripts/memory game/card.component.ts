@@ -12,7 +12,7 @@
 
 })
 
-export class CardComponent {
+export class CardComponent { //123
     isOpen: boolean = false;
     isClose: boolean = true;
 
