@@ -114,3 +114,32 @@
         width: 100px;
     }
 }
+
+.mg-center {
+    text-align: center;
+}
+
+
+.mg-main-board {
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+.mgCard {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.mgCardFront {
+    background-color: #30dec6;
+}
+
+.mgCardBack {
+    background-image: url(../images/card_back.png);
+}
+
+.mgCardNumber {
+    display: none;
+}

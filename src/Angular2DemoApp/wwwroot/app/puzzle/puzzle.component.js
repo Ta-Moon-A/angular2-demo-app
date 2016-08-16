@@ -29,4 +29,3 @@ var PuzzleComponent = (function () {
     return PuzzleComponent;
 }());
 exports.PuzzleComponent = PuzzleComponent;
-//# sourceMappingURL=puzzle.component.js.map

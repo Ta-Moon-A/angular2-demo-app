@@ -45,4 +45,3 @@ var DetailConfirmComponent = (function () {
     return DetailConfirmComponent;
 }());
 exports.DetailConfirmComponent = DetailConfirmComponent;
-//# sourceMappingURL=detail.confirm.component.js.map

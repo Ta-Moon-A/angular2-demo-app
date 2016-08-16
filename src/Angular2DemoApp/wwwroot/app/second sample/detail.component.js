@@ -45,4 +45,3 @@ var DetailComponent = (function () {
     return DetailComponent;
 }());
 exports.DetailComponent = DetailComponent;
-//# sourceMappingURL=detail.component.js.map

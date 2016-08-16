@@ -34,4 +34,3 @@ var MyHttpService = (function () {
     return MyHttpService;
 }());
 exports.MyHttpService = MyHttpService;
-//# sourceMappingURL=myHttpService.service.js.map

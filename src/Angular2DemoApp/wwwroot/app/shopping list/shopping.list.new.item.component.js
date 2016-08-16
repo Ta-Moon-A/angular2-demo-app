@@ -48,4 +48,3 @@ function greaterThenZero(control) {
         return { "isGreaterThenZero": true };
     }
 }
-//# sourceMappingURL=shopping.list.new.item.component.js.map

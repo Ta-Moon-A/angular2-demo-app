@@ -35,4 +35,3 @@ var HttpSampleComponent = (function () {
     return HttpSampleComponent;
 }());
 exports.HttpSampleComponent = HttpSampleComponent;
-//# sourceMappingURL=http-sample.component.js.map

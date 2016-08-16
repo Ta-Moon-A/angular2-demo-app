@@ -9,7 +9,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
                     <a [routerLink]="['/DirectivesSample']">Directives Sample</a> |
                     <a [routerLink]="['/TemplateDrivenForm']">Template Driven Form</a> |
                     <a [routerLink]="['/DataDrivenForm']">Data Driven Form</a> |
-                    <a [routerLink]="['/HttpSampleComponent']">Http Sample</a> 
+                    <a [routerLink]="['/HttpSampleComponent']">Http Sample |</a> 
+                    <a [routerLink]="['/MemoryGameComponent']">Memory game</a> 
                   </nav>
                     <br><br>
                  <router-outlet></router-outlet>

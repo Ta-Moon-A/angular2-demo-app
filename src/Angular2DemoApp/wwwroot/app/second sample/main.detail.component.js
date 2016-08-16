@@ -33,4 +33,3 @@ var MainDetailComponent = (function () {
     return MainDetailComponent;
 }());
 exports.MainDetailComponent = MainDetailComponent;
-//# sourceMappingURL=main.detail.component.js.map

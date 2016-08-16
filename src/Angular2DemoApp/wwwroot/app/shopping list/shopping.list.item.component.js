@@ -35,4 +35,3 @@ var ShoppingListItemComponent = (function () {
     return ShoppingListItemComponent;
 }());
 exports.ShoppingListItemComponent = ShoppingListItemComponent;
-//# sourceMappingURL=shopping.list.item.component.js.map

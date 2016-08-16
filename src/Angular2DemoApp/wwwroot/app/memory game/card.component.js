@@ -9,16 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var HomeComponent = (function () {
-    function HomeComponent() {
+var CardComponent = (function () {
+    function CardComponent() {
+        this.isOpen = false;
+        this.isClose = true;
     }
-    HomeComponent = __decorate([
+    CardComponent.prototype.onCardClick = function () {
+        if (this.isOpen) {
+            this.isClose = true;
+            this.isOpen = false;
+            return;
+        }
+        if (this.isClose) {
+            this.isOpen = true;
+            this.isClose = false;
+            return;
+        }
+    };
+    CardComponent = __decorate([
         core_1.Component({
-            selector: "ts-home",
-            template: "<h3>Home Component</h3>"
+            selector: "card-item",
+            template: "<button [ngClass]=\"{mgCard : true,\n                         mgCardBack : isClose,\n                         mgCardFront : isOpen}\"  (click)=\"onCardClick()\">\n      <span  [ngClass]=\"{mgCardNumber : isClose}\">5</span>  \n    </button>"
         }), 
         __metadata('design:paramtypes', [])
-    ], HomeComponent);
-    return HomeComponent;
+    ], CardComponent);
+    return CardComponent;
 }());
-exports.HomeComponent = HomeComponent;
+exports.CardComponent = CardComponent;

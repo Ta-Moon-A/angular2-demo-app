@@ -29,4 +29,3 @@ var ShoppingListService = (function () {
     return ShoppingListService;
 }());
 exports.ShoppingListService = ShoppingListService;
-//# sourceMappingURL=shopping.list.service.js.map
