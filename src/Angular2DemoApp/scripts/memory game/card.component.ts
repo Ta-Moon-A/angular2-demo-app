@@ -1,36 +1,25 @@
-﻿import {Component} from "@angular/core";
-
+﻿import {Component, EventEmitter} from "@angular/core";
+import {CardItem} from "./cardItem";
 
 @Component({
     selector: "card-item",
     template:
     `<button [ngClass]="{mgCard : true,
-                         mgCardBack : isClose,
-                         mgCardFront : isOpen}"  (click)="onCardClick()">
-      <span  [ngClass]="{mgCardNumber : isClose}">5</span>  
-    </button>`
+                         mgCardBack : !selectedCard.isOpen,
+                         mgCardFront : selectedCard.isOpen}"  (click)="onCardClick()" [disabled]="selectedCard.isSolved">
+      <span  [ngClass]="{mgCardNumber : !selectedCard.isOpen}">{{selectedCard.cardPoint}}</span>  
+    </button>`,
+    outputs: ['itemOpened'],
+    inputs: ['selectedCard']
 
 })
 
-export class CardComponent { //123
-    isOpen: boolean = false;
-    isClose: boolean = true;
-
+export class CardComponent {
+    selectedCard: CardItem;
+    itemOpened = new EventEmitter<boolean>();
 
     onCardClick() {
-        if (this.isOpen) {
-            this.isClose = true;
-            this.isOpen = false;
-            return;
-        }
-
-        if (this.isClose) {
-            this.isOpen = true;
-            this.isClose = false;
-            return;
-        }
-
+        this.selectedCard.isOpen = !this.selectedCard.isOpen;
+        this.itemOpened.emit(this.selectedCard.isOpen);
     }
-
-
 }

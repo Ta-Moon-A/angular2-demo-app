@@ -11,25 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var CardComponent = (function () {
     function CardComponent() {
-        this.isOpen = false;
-        this.isClose = true;
+        this.itemOpened = new core_1.EventEmitter();
     }
     CardComponent.prototype.onCardClick = function () {
-        if (this.isOpen) {
-            this.isClose = true;
-            this.isOpen = false;
-            return;
-        }
-        if (this.isClose) {
-            this.isOpen = true;
-            this.isClose = false;
-            return;
-        }
+        this.selectedCard.isOpen = !this.selectedCard.isOpen;
+        this.itemOpened.emit(this.selectedCard.isOpen);
     };
     CardComponent = __decorate([
         core_1.Component({
             selector: "card-item",
-            template: "<button [ngClass]=\"{mgCard : true,\n                         mgCardBack : isClose,\n                         mgCardFront : isOpen}\"  (click)=\"onCardClick()\">\n      <span  [ngClass]=\"{mgCardNumber : isClose}\">5</span>  \n    </button>"
+            template: "<button [ngClass]=\"{mgCard : true,\n                         mgCardBack : !selectedCard.isOpen,\n                         mgCardFront : selectedCard.isOpen}\"  (click)=\"onCardClick()\" [disabled]=\"selectedCard.isSolved\">\n      <span  [ngClass]=\"{mgCardNumber : !selectedCard.isOpen}\">{{selectedCard.cardPoint}}</span>  \n    </button>",
+            outputs: ['itemOpened'],
+            inputs: ['selectedCard']
         }), 
         __metadata('design:paramtypes', [])
     ], CardComponent);
